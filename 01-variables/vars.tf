@@ -16,5 +16,5 @@ variable "apple_dicto" {
 }
 
 output "mango_dict0" {
-  value = "var.apple_dicto{number2}"
+  value = var.apple_dicto["number2"]
 }
