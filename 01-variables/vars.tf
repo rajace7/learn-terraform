@@ -32,3 +32,21 @@ output "mango_dict0" {
 output "cat" {
   value =  var.apple_dicto["number1"]
 }
+
+variable "dict" {
+  default = {
+    n1 = 100
+    n2 = 123.94
+    s1 = "string example"
+    boolean = true
+
+  }
+}
+
+output "dict" {
+  value = var.dict.n1
+}
+
+output "dict1" {
+  value = var.dict.s1
+}
