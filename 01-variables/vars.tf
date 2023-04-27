@@ -44,7 +44,7 @@ variable "dict" {
 }
 
 output "dict" {
-  value = var.dict.n1
+  value = var.dict.n2
 }
 
 output "dict1" {
