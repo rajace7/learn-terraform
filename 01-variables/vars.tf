@@ -50,3 +50,16 @@ output "dict" {
 output "dict1" {
   value = var.dict.s1
 }
+
+variable "list" {
+  default = [
+    100,
+    "string1",
+    1003.034,
+    true
+  ]
+}
+
+output "list1" {
+  value = var.list[2]
+}
