@@ -14,7 +14,7 @@ resource "aws_instance" "testec2" {
     owners = ["973714476881"]
   }
 
-}
+
 
 output "testec2" {
   value = data.aws_ami.testec2.image_id
