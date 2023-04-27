@@ -1,8 +1,17 @@
 variable "sample_string" {
   default = "hello world"
 }
+
 output "sample_string" {
   value = var.sample_string
+}
+
+variable "apple" {
+  default = " fruit is apple"
+}
+
+output "apple" {
+  value = var.apple
 }
 
 variable "apple_dicto" {

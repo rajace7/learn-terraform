@@ -8,7 +8,6 @@ resource "aws_instance" "testec2" {
 }
 
 
-
   data "aws_ami" "testec2" {
     most_recent = true
     owners = ["973714476881"]
@@ -19,3 +18,4 @@ resource "aws_instance" "testec2" {
 output "testec2" {
   value = data.aws_ami.testec2.image_id
 }
+
