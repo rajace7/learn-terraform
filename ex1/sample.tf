@@ -26,3 +26,7 @@ output "testec2" {
   value = data.aws_ami.testec2.image_id
 }
 
+output "allow_all" {
+  value = data.aws_security_group.allow_all.id
+}
+
