@@ -63,3 +63,11 @@ variable "list" {
 output "list1" {
   value = var.list[2]
 }
+
+variable "string1" {
+  default = "i like mango fruit"
+}
+
+output "string1" {
+  value = var.string1
+}
