@@ -33,6 +33,7 @@ output "allow_all" {
 resource "aws_instance" "test" {
   ami           = "ami-0b5a2b5b8f2be4ec2"
   instance_type = "t3.micro"
+  vpc_security_group_ids = [ data.aws_security_group.test.id ]
 
   tags = {
     Name = "ec2instance_test"
@@ -44,8 +45,6 @@ data "aws_ami" "test" {
   most_recent      = true
   name_regex       = "Centos-8-DevOps-Practice"
   owners           = ["973714476881"]
-
-  vpc_security_group_ids = [ data.aws_security_group.test.id ]
 }
 
 output "test" {
