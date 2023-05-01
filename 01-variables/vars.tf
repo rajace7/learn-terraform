@@ -71,3 +71,10 @@ variable "string1" {
 output "string1" {
   value = var.string1
 }
+
+variable "numeric1" {
+  default = 100
+}
+output "numeric1" {
+  value = var.numeric1
+}
