@@ -45,7 +45,7 @@ data "aws_ami" "test" {
   name_regex       = "Centos-8-DevOps-Practice"
   owners           = ["973714476881"]
 
-  vpc_id     = data.aws_security_group.test.vpc_id
+  vpc_id     = data.aws_security_group.test.id
 }
 
 output "test" {
@@ -58,5 +58,5 @@ data "aws_security_group" "test" {
 }
 
 output "vpc_id" {
-  value = data.aws_ami.test.vpc_id
+  value = data.aws_ami.test.id
 }
