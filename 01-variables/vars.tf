@@ -78,3 +78,17 @@ variable "numeric1" {
 output "numeric1" {
   value = var.numeric1
 }
+
+variable "dict2" {
+  default = {
+    number3 = 1333333
+    number4 = 15544.255
+    string1 = "hello rajesh1"
+    boolean1 = true
+
+  }
+}
+
+output "dict2" {
+  value = var.dict2[number4]
+}
