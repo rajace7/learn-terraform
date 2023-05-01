@@ -90,5 +90,5 @@ variable "dict2" {
 }
 
 output "dict2" {
-  value = var.dict2[number4]
+  value = var.dict2["number4"]
 }
