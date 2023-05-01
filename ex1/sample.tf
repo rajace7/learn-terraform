@@ -33,7 +33,8 @@ output "allow_all" {
 resource "aws_instance" "test" {
   ami           = "ami-0b5a2b5b8f2be4ec2"
   instance_type = "t3.micro"
-  vpc_security_group_ids = [ data.aws_security_group.test.id ]
+  #vpc_security_group_ids = [ data.aws_security_group.test.id ]
+  vpc_id = data.aws_security_group.test.id
 
   tags = {
     Name = "ec2instance_test"
