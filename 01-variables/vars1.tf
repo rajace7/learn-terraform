@@ -35,6 +35,6 @@ output "list1a" {
 }
 
 output "list1b" {
-  value = "echo index2 name is ${var.list1[2]}"
+  value = "index2 name is ${var.list1[2]}"
 }
 
