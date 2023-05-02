@@ -9,9 +9,9 @@ resource "null_resource" "instances" {
 
 variable "instances" {
   default = {
-      frontend =
+    frontend =
       {
-      name="frontend"
+        name="frontend"
         instance_type = "t3.micro"
       }
 
