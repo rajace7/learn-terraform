@@ -31,5 +31,6 @@ variable "list1" {
 }
 
 output "list1a" {
-  value = var.list1[1]
+  value = "index1 name is ${var.list1[1]}"
 }
+
