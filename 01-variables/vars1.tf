@@ -38,3 +38,27 @@ output "list1b" {
   value = "index2 name is ${var.list1[2]}"
 }
 
+variable "dictonary" {
+  default = {
+    name = "rajesh"
+    id = 10068
+    company = "TCS"
+    designation = "devops engineer"
+    salary = 4000000.54
+  }
+}
+
+output "dictonary1a" {
+  value = var.dictonary.name
+}
+
+output "dictonary1b" {
+  value = var.dictonary.designation
+}
+
+output "dictonary1c" {
+  value = var.dictonary.salary
+}
+
+
+
