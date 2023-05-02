@@ -34,3 +34,7 @@ output "list1a" {
   value = "index1 name is ${var.list1[1]}"
 }
 
+output "list1b" {
+  value = "echo index2 name is ${var.list1[2]}"
+}
+
