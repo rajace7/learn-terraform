@@ -11,7 +11,7 @@ output "aws_ami" {
 }
 
 variable "instance_type" {
-  default = "t3.micro"
+  default = "t3.small"
 }
 
 output "instance_type" {
