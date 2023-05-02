@@ -21,3 +21,7 @@ output "sample2a" {
 output "sameple2b" {
   value = "string value = ${var.sample2}"
 }
+
+output "sample1a" {
+  value = "numeric value is ${var.sample1}"
+}
