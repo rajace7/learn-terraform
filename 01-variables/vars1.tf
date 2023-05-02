@@ -17,3 +17,7 @@ output "sample2" {
 output "sample2a" {
   value = var.sample2
 }
+
+output "sameple2b" {
+  value = "string value ${var.sample2}"
+}
