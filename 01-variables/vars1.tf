@@ -25,3 +25,11 @@ output "sameple2b" {
 output "sample1a" {
   value = "numeric value is ${var.sample1}"
 }
+
+variable "list1" {
+  default = ["rajesh", "gana","rammohan"]
+}
+
+output "list1a" {
+  value = var.list1[1]
+}
