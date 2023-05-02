@@ -49,7 +49,7 @@ variable "dictonary" {
 }
 
 output "dictonary1a" {
-  value = var.dictonary.name
+  value = "employee name is ${var.dictonary.name}"
 }
 
 output "dictonary1b" {
@@ -57,7 +57,7 @@ output "dictonary1b" {
 }
 
 output "dictonary1c" {
-  value = var.dictonary.salary
+  value = "employee salary is ${var.dictonary.salary}"
 }
 
 
