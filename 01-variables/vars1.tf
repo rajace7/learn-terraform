@@ -19,5 +19,5 @@ output "sample2a" {
 }
 
 output "sameple2b" {
-  value = "string value ${var.sample2}"
+  value = "string value = ${var.sample2}"
 }
