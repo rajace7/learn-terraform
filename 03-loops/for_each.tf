@@ -22,7 +22,7 @@ resource "null_resource" "friends" {
   for_each = var.friends
 
   provisioner "local-exec" {
-    command = "echo friend name - ${each.key} - ${each.value}"
+    command = "echo friend name - ${each.key} - ${each.value[ "count" ]}"
 
   }
 
