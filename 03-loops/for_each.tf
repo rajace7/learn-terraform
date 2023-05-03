@@ -10,6 +10,11 @@ resource "null_resource" "friends" {
 
   for_each = var.friends
 
-  command = "echo ${each.key}"
+  provisioner "local-exec" {
+    command = "echo ${each.key}"
+
+  }
+
+
 
 }
