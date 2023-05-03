@@ -1,24 +1,15 @@
-resource "null_resource" "instances" {
-
-  for_each = var.instances
-
-  provisioner "local-exec" {
-    command = "echo ${each.key}"
+variable "friends" {
+  default ={
+    name = "raja"
+    name = "gana"
+    name = "rama"
   }
 }
 
-variable "instances" {
-  default = {
-    frontend =
-      {
-        name = "frontend"
-        instance_type = "t3.micro"
-      }
+resource "null_resource" "friends" {
 
-    mongodb =
-    {
-      name = "mongodb"
-      instance_type = "t3.micro"
-    }
-  }
+  for_each = var.friends
+
+  command = "echo ${each.key}"
+
 }
