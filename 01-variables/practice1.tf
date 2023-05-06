@@ -15,5 +15,5 @@ output "number" {
 }
 
 output "string2" {
-  value = "value of string ${var.string}"
+  value = "value of string = ${var.string}"
 }
