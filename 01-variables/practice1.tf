@@ -25,3 +25,17 @@ variable "list11" {
 output "list11" {
   value = var.list11[1]
 }
+
+variable "map1" {
+  default = {
+    string1="hello terraform"
+    number1 = 10093.0003
+    boolean = true
+    string2 = " hello terra2"
+    string3 = 100
+  }
+}
+
+output "map1" {
+  value = var.map1
+}
