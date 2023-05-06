@@ -13,3 +13,7 @@ output "string" {
 output "number" {
   value = var.number
 }
+
+output "string2" {
+  value = "value of string ${var.string}"
+}
