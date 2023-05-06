@@ -39,3 +39,7 @@ variable "map1" {
 output "map1" {
   value = var.map1.string1
 }
+
+output "map2" {
+  value = var.map1["string1"]
+}
