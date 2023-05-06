@@ -23,5 +23,5 @@ variable "list11" {
 }
 
 output "list11" {
-  value = var.list11
+  value = var.list11[2]
 }
