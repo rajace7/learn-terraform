@@ -37,5 +37,5 @@ variable "map1" {
 }
 
 output "map1" {
-  value = var.map1.string2
+  value = var.map1.string1
 }
