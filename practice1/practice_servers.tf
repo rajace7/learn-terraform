@@ -14,15 +14,19 @@ data "aws_security_group" "allow_all" {
   name = "allow_all"
 }
 
+variable "components" {
+  default = ["frontend","mongod","catalogue"]
+}
 
 resource "aws_instance" "frontend" {
+  count = length(var.components)
   ami           = data.aws_ami.ami.image_id
   instance_type = "t3.micro"
 
   vpc_security_group_ids = [data.aws_security_group.allow_all.id]
 
   tags = {
-    Name = "frontend"
+    Name = var.components[count.index]
   }
 }
 
