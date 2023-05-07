@@ -25,3 +25,7 @@ output "dict1" {
 output "dict2" {
   value = var.dict1["designation"]
 }
+
+output "env" {
+  value = var.env
+}
