@@ -19,3 +19,5 @@ variable "dict1" {
 
   }
 }
+
+variable "env" {}
