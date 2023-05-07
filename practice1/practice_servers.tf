@@ -17,19 +17,19 @@ data "aws_security_group" "allow_all" {
 variable "components" {
   default = {
     frontend ={
-      name = "frontend_dev"
+      name = "frontend"
       instance_type = "t3.micro"
     }
     mongod ={
-      name = "mongod_dev"
+      name = "mongod"
       instance_type = "t3.small"
     }
     catalogue ={
-      name = "catalogue_dev"
+      name = "catalogue"
       instance_type = "t3.micro"
     }
     redis ={
-      name = "redis_dev"
+      name = "redis"
       instance_type = "t3.micro"
     }
   }
