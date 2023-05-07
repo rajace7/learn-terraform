@@ -15,7 +15,7 @@ data "aws_security_group" "allow_all" {
 }
 
 variable "instance_type" {
-  instance_type = "t3.micro"
+  default = "t3.micro"
 }
 
 variable "components" {
