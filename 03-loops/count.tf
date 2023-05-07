@@ -5,7 +5,7 @@ resource "null_resource" "friends" {
 }
 
 output "friends" {
-  value = count
+  value = length(var.friends)
 }
 
 variable "friends" {
