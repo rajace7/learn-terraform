@@ -4,7 +4,7 @@ resource "null_resource" "employee" {
 
   provisioner "local-exec" {
 
-    command = "echo count is ${length(var.employee})}"
+    command = "echo count is ${length(var.employee)}"
   }
 
 
