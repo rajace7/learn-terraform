@@ -49,27 +49,13 @@ resource "aws_instance" "instance" {
   }
 }
 
-/*resource "aws_instance" "mongod" {
-  ami           = data.aws_ami.ami.image_id
-  instance_type = "t3.micro"
-  vpc_security_group_ids = [data.aws_security_group.allow_all.id]
+resource "aws_route53_record" "dns_records" {
 
-  tags = {
-    Name = "mongod"
-  }
+  for_each = var.components
+  zone_id = "Z04548223K1NBBTA1AB3D"
+  name    = "${each.value["name"]}-dev.rpadaladevops.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.instance[each.value["name"]].private_ip]
 }
-
-resource "aws_instance" "catalogue" {
-  ami           = data.aws_ami.ami.image_id
-  instance_type = "t3.micro"
-  vpc_security_group_ids = [data.aws_security_group.allow_all.id]
-
-  tags = {
-    Name = "catalogue"
-  }
-}
-
-output "allow_all" {
-  value = data.aws_security_group.allow_all.id
-}*/
 
