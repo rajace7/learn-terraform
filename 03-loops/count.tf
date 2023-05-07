@@ -1,11 +1,13 @@
-resource "null_resource" "fruits" {
-  count = length(var.fruits)
+resource "null_resource" "friends" {
 
-  provisioner "local-exec" {
-    command = "echo fruit is ${var.fruits[count.index]}"
-  }
+  count = length(var.friends)
+
 }
 
-variable "fruits" {
-  default =  ["apple", "mango", "orange"]
+output "friends" {
+  value = count
+}
+
+variable "friends" {
+  default = ["raj", "ram", "gana"]
 }
