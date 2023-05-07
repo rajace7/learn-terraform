@@ -15,7 +15,7 @@ resource "null_resource" "employee" {
 variable "employee" {
 
   default = {
-    rajesh = {
+    rajesh_p = {
       name = "rajesh"
       salary = 902111
       designation = "devops"
@@ -23,14 +23,14 @@ variable "employee" {
       location = "plano city-texas"
 
     }
-    ganapathi = {
+    ganapathi_s = {
       name = "ganapathi"
       salary = 54558
       designation = "manager"
       id = 10145
       location = "vijayawada"
     }
-    rammohan = {
+    rammohan_p = {
 
       name = "rammohan"
       salary = 101455
