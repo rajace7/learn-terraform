@@ -3,5 +3,5 @@ resource "null_resource" "fruits" {
 }
 
 variable "fruits" {
-  value = ["apple", "mango", "orange"]
+  default =  ["apple", "mango", "orange"]
 }
