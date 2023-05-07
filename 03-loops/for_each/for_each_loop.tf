@@ -6,7 +6,7 @@ resource "null_resource" "employee" {
 
     //command = "echo count is ${length(var.employee)}"
 
-    command = "echo employee name is ${each.value["name"]}"
+    command = "echo employee name is - ${each.value["name"]}"
   }
 
 
