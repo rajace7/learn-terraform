@@ -24,6 +24,7 @@ resource "null_resource" "provisioners" {
 
   provisioner "remote-exec" {
     inline = [
+      "rm -rf roboshop-shell1",
       "git clone https://github.com/rajace7/roboshop_shell1.git",
       "cd roboshop_shell1",
       "sudo bash ${each.value["name"]}.sh"
