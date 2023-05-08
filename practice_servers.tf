@@ -25,7 +25,7 @@ resource "null_resource" "provisioners" {
   provisioner "remote-exec" {
     inline = [
       "git clone https://github.com/rajace7/roboshop_shell1.git",
-      "cd learn-terraform",
+      "cd roboshop_shell1",
       "sudo bash ${each.value["name"]}.sh"
     ]
   }
