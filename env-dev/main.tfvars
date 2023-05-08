@@ -15,6 +15,11 @@ components = {
     name          = "redis"
     instance_type = "t3.micro"
   }
+  user = {
+    name          = "user"
+    instance_type = "t3.micro"
+  }
 }
+
 
 env = "dev"
