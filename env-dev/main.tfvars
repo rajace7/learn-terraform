@@ -34,7 +34,7 @@ components = {
     password      = "RoboShop@1"
   }
   rabbitmq = {
-    name          = "rabbimq"
+    name          = "rabbitmq"
     instance_type = "t3.micro"
     password      = "roboshop123"
   }
