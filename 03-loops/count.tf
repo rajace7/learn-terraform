@@ -4,14 +4,15 @@ resource "null_resource" "friends" {
 
   provisioner "local-exec" {
 
-    command = "echo friend is ${var.friends[count.index].name}"
+    command = "echo friend is ${var.friends[count.index]}"
   }
 }
 
 variable "friends" {
-  default = [  "name={rajesh},salary= 0",
-    "name =ramesh, salary = 1000",
-    "name = {gana}, salary =50000"
+  default = [  {name ="rajesh", salary = "0"},
+    {name ="rajesh1", salary = "1000"},
+    {name ="rajesh2", salary = "020034"},
+
   ]
 }
 
