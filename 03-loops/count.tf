@@ -9,6 +9,9 @@ resource "null_resource" "friends" {
 }
 
 variable "friends" {
-  default = [  "r1", "r2","r3"]
+  default = [  "name={rajesh},salary= 0",
+    "name =ramesh, salary = 1000",
+    "name = {gana}, salary =50000"
+  ]
 }
 
