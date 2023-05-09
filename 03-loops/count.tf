@@ -4,7 +4,7 @@ resource "null_resource" "friends" {
 
   provisioner "local-exec" {
 
-    command = "echo ${count}"
+    command = "echo ${count.index}"
   }
 }
 
