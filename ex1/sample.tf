@@ -47,3 +47,7 @@ resource "aws_route53_record" "frontend" {
   records = [aws_instance.frontend.private_ip]
 }
 
+output "zoneid" {
+  value = aws_route53_record.frontend.zone_id
+}
+
