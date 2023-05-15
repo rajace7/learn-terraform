@@ -33,9 +33,9 @@ resource "aws_instance" "catalogue" {
 }
 
 data "aws_route53_zone" "zoneid" {
- // name         = "rpadaladevops.online"
+  name         = "rpadaladevops.online"
   private_zone = true
- zone_id = "Z04548223K1NBBTA1AB3D"
+ //zone_id = "Z04548223K1NBBTA1AB3D"
 }
 
 
