@@ -47,3 +47,11 @@ output "catalogue-ami" {
 
 }
 
+output "catalogue-ip" {
+  value = aws_instance.catalogue.private_ip
+}
+
+output "mongo-ip" {
+  value = aws_instance.mongod.private_ip
+}
+
