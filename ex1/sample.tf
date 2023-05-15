@@ -12,7 +12,7 @@ output "frontend-dev-ami" {
 }
 
 output "frontend-dev-amiid" {
-  value = aws_instance.frontend-dev.id
+  value = aws_instance.frontend-dev.private_ip
 }
 
 output "a1" {
