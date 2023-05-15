@@ -33,9 +33,9 @@ resource "aws_instance" "catalogue" {
 }
 
 data "aws_route53_zone" "zoneid" {
-  name         = "rpadaladevops.online"
+ // name         = "rpadaladevops.online"
   private_zone = true
- //zone_id = "Z04548223K1NBBTA1AB3D"
+ zone_id = "Z04548223K1NBBTA1AB3D"
 }
 
 
@@ -46,6 +46,24 @@ resource "aws_route53_record" "frontend" {
   ttl     = 30
   records = [aws_instance.frontend.private_ip]
 }
+
+resource "aws_route53_record" "mongod" {
+  zone_id = data.aws_route53_zone.zoneid.zone_id
+  name    = "mongod-dev.rpadaladevops.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.mongod.private_ip]
+}
+
+resource "aws_route53_record" "catalogue" {
+  zone_id = data.aws_route53_zone.zoneid.zone_id
+  name    = "catalogue-dev.rpadaladevops.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.catalogue.private_ip]
+}
+
+
 
 output "zoneid" {
   value = aws_route53_record.frontend.zone_id
