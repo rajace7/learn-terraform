@@ -37,3 +37,13 @@ output "frontend-dev-ami" {
 
 }
 
+output "mongo-ami" {
+  value = aws_instance.mongod.ami
+
+}
+
+output "catalogue-ami" {
+  value = aws_instance.catalogue.ami
+
+}
+
