@@ -32,26 +32,11 @@ resource "aws_instance" "catalogue" {
   }
 }
 
-output "frontend-dev-ami" {
-  value = aws_instance.frontend.ami
-
-}
-
-output "mongo-ami" {
-  value = aws_instance.mongod.ami
-
-}
-
-output "catalogue-ami" {
-  value = aws_instance.catalogue.ami
-
-}
-
-output "catalogue-ip" {
-  value = aws_instance.catalogue.private_ip
-}
-
-output "mongo-ip" {
-  value = aws_instance.mongod.private_ip
+resource "aws_route53_record" "frontend" {
+  zone_id = "Z04548223K1NBBTA1AB3D"
+  name    = "frontend-dev.rpadaladevops.online"
+  type    = "A"
+  ttl     = 30
+  records = aws_instance.frontend.private_ip
 }
 
