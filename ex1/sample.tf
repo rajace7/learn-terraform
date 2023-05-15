@@ -32,8 +32,15 @@ resource "aws_instance" "catalogue" {
   }
 }
 
+data "aws_route53_zone" "zoneid" {
+  name         = "rpadaladevops.online"
+  private_zone = true
+ // zone_id = "Z04548223K1NBBTA1AB3D"
+}
+
+
 resource "aws_route53_record" "frontend" {
-  zone_id = "Z04548223K1NBBTA1AB3D"
+  zone_id = data.aws_route53_zone.zoneid.zone_id
   name    = "frontend-dev.rpadaladevops.online"
   type    = "A"
   ttl     = 30
