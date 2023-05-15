@@ -6,3 +6,7 @@ resource "aws_instance" "frontend-dev" {
     Name = "frontend-dev"
   }
 }
+
+output "frontend-dev-ami" {
+  value = aws_instance.frontend-dev.ami
+}
