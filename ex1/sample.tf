@@ -14,3 +14,7 @@ output "frontend-dev-ami" {
 output "frontend-dev-amiid" {
   value = aws_instance.frontend-dev.id
 }
+
+output "a1" {
+  value = aws_instance.frontend-dev.tags
+}
