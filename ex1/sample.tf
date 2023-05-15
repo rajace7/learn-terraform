@@ -10,3 +10,7 @@ resource "aws_instance" "frontend-dev" {
 output "frontend-dev-ami" {
   value = aws_instance.frontend-dev.ami
 }
+
+output "frontend-dev-amiid" {
+  value = aws_instance.frontend-dev.id
+}
