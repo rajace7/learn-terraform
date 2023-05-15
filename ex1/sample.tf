@@ -1,5 +1,12 @@
-resource "aws_instance" "frontend-dev" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+data "aws_ami" "ami" {
+  //executable_users = ["self"]
+  most_recent = true
+  name_regex  = "  Centos-8-DevOps-Practice"
+  owners      = ["973714476881"]
+}
+
+  resource "aws_instance" "frontend-dev" {
+  ami           = data.aws_ami.ami.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -9,12 +16,6 @@ resource "aws_instance" "frontend-dev" {
 
 output "frontend-dev-ami" {
   value = aws_instance.frontend-dev.ami
+
 }
 
-output "frontend-dev-amiid" {
-  value = aws_instance.frontend-dev.private_ip
-}
-
-output "a1" {
-  value = aws_instance.frontend-dev.tags
-}
